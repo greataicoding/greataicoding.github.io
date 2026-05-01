@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreatAICoding - Gmail Cleaner</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Georgia, serif;
+            color: #222;
+            line-height: 1.7;
+        }
+        header {
+            background: #1a73e8;
+            color: white;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.4em;
+            margin-bottom: 0.3em;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .tagline {
+            background: #f8f9fa;
+            text-align: center;
+            padding: 30px 24px;
+            font-size: 1.1em;
+            color: #444;
+            border-bottom: 1px solid #ddd;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        h2 {
+            font-size: 1.3em;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+            color: #1a73e8;
+        }
+        p { margin-bottom: 1em; }
+        ul {
+            padding-left: 1.4em;
+            margin-bottom: 1em;
+        }
+        li { margin-bottom: 0.5em; }
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            padding-left: 0;
+        }
+        .steps li {
+            counter-increment: step;
+            padding-left: 2.5em;
+            position: relative;
+            margin-bottom: 0.8em;
+        }
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #1a73e8;
+            color: white;
+            width: 1.8em;
+            height: 1.8em;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85em;
+            font-family: sans-serif;
+        }
+        .links {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 2em;
+        }
+        .links h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+        .links a {
+            display: inline-block;
+            margin: 6px 8px 6px 0;
+            padding: 8px 16px;
+            background: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-size: 0.9em;
+        }
+        .links a:hover { background: #1557b0; }
+        .links a.secondary {
+            background: white;
+            color: #1a73e8;
+            border: 1px solid #1a73e8;
+        }
+        .links a.secondary:hover { background: #f0f4ff; }
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.8em;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 3em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>GreatAICoding - Gmail Cleaner</h1>
+    <p>Take back control of your inbox</p>
+</header>
+
+<div class="tagline">
+    Scan. Review. Delete. — Identify every sender in your Gmail™ mailbox and bulk-delete the ones you no longer need.
+</div>
+
+<main>
+
+    <h2>What is Gmail™ Cleaner?</h2>
+    <p>Gmail™ Cleaner is a Google Workspace™ Add-on that crawls your entire Gmail™ mailbox and builds a detailed report of every unique sender — their name, email address, how many emails they've sent you, and when. Once you have the list, you can review it at your own pace and bulk-delete senders you no longer want to hear from.</p>
+    <p>Everything runs inside your own Google account using Google Apps Script™. No data leaves your account. All results are stored in your own Google Sheets™ spreadsheet.</p>
+
+    <h2>How it works</h2>
+    <ol class="steps">
+        <li>Install Gmail™ Cleaner from the Google Workspace™ Marketplace</li>
+        <li>Open a Google Sheets™ spreadsheet and go to <strong>Extensions → Gmail Cleaner → Analyze Inbox</strong></li>
+        <li>The crawler runs silently in the background, building your Senders list</li>
+        <li>Click <strong>Prepare Senders for Review</strong> to add a Delete/Keep dropdown to each row</li>
+        <li>Mark senders at your own pace — come back whenever you like</li>
+        <li>Click <strong>Process Marked Senders</strong> to delete or trash their emails</li>
+    </ol>
+
+    <h2>Key features</h2>
+    <ul>
+        <li>Crawls mailboxes of any size — tested on accounts with 36,000+ threads</li>
+        <li>Runs entirely in the background across multiple sessions</li>
+        <li>Clickable links open Gmail™ filtered to each sender for manual review</li>
+        <li>Move to Trash (recoverable 30 days) or Delete Permanently</li>
+        <li>Full audit log of every deletion</li>
+        <li>Safe — nothing is deleted without your explicit confirmation</li>
+    </ul>
+
+    <h2>Privacy &amp; Security</h2>
+    <p>Gmail™ Cleaner does not transmit, store, or share any of your data outside your Google account. All processing happens inside Google Apps Script™. Please read our full <a href="https://greataicoding.github.io/gmail-cleaner-app/privacy-policy.html">Privacy Policy</a> for details.</p>
+
+    <div class="links">
+        <h2>Links</h2>
+        <a href="https://greataicoding.github.io/gmail-cleaner-app/support.html">Support</a>
+        <a href="https://greataicoding.github.io/gmail-cleaner-app/privacy-policy.html">Privacy Policy</a>
+        <a href="https://greataicoding.github.io/gmail-cleaner-app/terms-of-service.html">Terms of Service</a>
+        <a href="https://github.com/greataicoding/SilentCrawler/issues" class="secondary">Report an Issue</a>
+        <a href="https://github.com/greataicoding/SilentCrawler" class="secondary">GitHub</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>GreatAICoding — <a href="mailto:greataicoding@gmail.com">greataicoding@gmail.com</a></p>
+    <p style="margin-top:8px;">Gmail™, Google Sheets™, Google Workspace™, and Google Apps Script™ are trademarks of Google LLC.<br>
+    GreatAICoding - Gmail™ Cleaner is not affiliated with or endorsed by Google LLC.</p>
+</footer>
+
+</body>
+</html>
